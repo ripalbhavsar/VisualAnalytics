@@ -8,6 +8,7 @@
       "name": "losses",
       "url": "https://raw.githubusercontent.com/ripalbhavsar/VisualAnalytics/master/losses2015_transformed.csv",
       "format": {"type": "csv", "parse": "auto"},
+       "title": "Losses in US in 2015",
       "transform": [
         {
           "type": "aggregate",
