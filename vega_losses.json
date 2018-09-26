@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "description": "A bar chart showing crop losses in the United States due to various natural and man-made damages.",
   "width": 500,
   "data": { "url": "https://raw.githubusercontent.com/ripalbhavsar/VisualAnalytics/master/losses2015_transformed.csv"},
   "title": "Losses in US in 2015",
