@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v4.json",
+  "width": 960,
+  "height": 500,
+  "autosize": "none",
+
+ "data": [
+  {
+    "name": "states",
+    "url": "https://raw.githubusercontent.com/ripalbhavsar/VisualAnalytics/master/us-10m.json",
+    "format": {"type": "topojson", "feature": "states"},
+    "transform": [
+      {
+        "type": "geopath"
+      }
+    ]
+  }
+],
+
+ "projections": [
+    {
+      "name": "projection",
+      "type": "albersUsa"
+    }
+  ],
+
+"marks": [
+  {
+    "type": "path",
+    "from": {"data": "states"},
+    "properties": {
+      "enter": {
+        "path": {"field": "layout_path"},
+        "fill": {"value": "#dedede"},
+        "stroke": {"value": "white"}
+      }
+    }
+  }
+]
+}
