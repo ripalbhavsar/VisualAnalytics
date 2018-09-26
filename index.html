@@ -13,14 +13,24 @@
 <body>
 
 <!-- Container for the visualization -->
-<div id="vis"></div>
+<div id="vis2"></div>
+<script type="text/javascript">
+  // var spec = "vega_losses.json";
+  // this does not work when you run locally due to security reasons - it needs to be read from a server
+  var spec1 = "https://raw.githubusercontent.com/ripalbhavsar/VisualAnalytics/master/vega_losses_states.json";
+  vegaEmbed('#vis2', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+<div id="vis1"></div>
 
 
 <script type="text/javascript">
   // var spec = "vega_losses.json";
   // this does not work when you run locally due to security reasons - it needs to be read from a server
-  var spec = "https://raw.githubusercontent.com/ripalbhavsar/VisualAnalytics/master/vega_losses.json";
-  vegaEmbed('#vis', spec).then(function(result) {
+  var spec = "https://raw.githubusercontent.com/ripalbhavsar/VisualAnalytics/master/vega_losses_bar_chart.json";
+  vegaEmbed('#vis1', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
